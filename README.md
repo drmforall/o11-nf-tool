@@ -14,7 +14,7 @@
 
 ![Six capabilities in one desktop workspace](media/capabilities.svg)
 
-o11 NF Tool brings title selection, track inspection, language preferences, progress, and local playback into one black-and-crimson desktop interface. This repository distributes the **Windows executable, user guide, and documentation artwork**. Application source and account sessions are excluded. Owner-supplied WVD files are stored separately in the private repository's `devices/` folder; they are not included in the downloadable EXE release.
+o11 NF Tool brings title selection, track inspection, language preferences, progress, and local playback into one black-and-crimson desktop interface. This repository distributes the **Windows executable, user guide, and documentation artwork**. Application source and account sessions are excluded. Owner-supplied WVD files are stored separately in the repository's `devices/` folder; they are not included in the downloadable EXE release.
 
 The current backend uses Android phone authentication. The historical TV wording on the activation checkbox refers to the browser code-entry page, not a switch to Android TV authentication. Quality is capped at **1920 × 1080**. Service acceptance and available tracks depend on your account, device setup, title, and the service response.
 
@@ -149,7 +149,7 @@ After a successful import, the app invalidates previous track selections and sta
 | Haier Android TV | [Haier WVD](devices/haier_haier_android_tv_ff_pro_17.0.0_d6fcadf2_20446_l1_20261005_120723.wvd) |
 | Vestel Android TV | [Vestel WVD](devices/vestel_android_tv_15.0.0_3acd8dbb_22402_l1_20261005_113102%20%282%29.wvd) |
 
-These owner-supplied WVD files contain device credentials and a private key. They are stored in the private repository, are not release assets or bundled into the EXE, and have not been tested for live service acceptance. Use only devices you are authorized to use; repository access does not grant redistribution rights.
+These owner-supplied WVD files contain device credentials and a private key. They are publicly available in this repository, are not release assets or bundled into the EXE, and have not been tested for live service acceptance. Use only devices you are authorized to use; repository access does not grant redistribution rights.
 
 ![Activity and quick tools](media/activity.svg)
 
@@ -287,7 +287,7 @@ Report reproducible issues through [GitHub Issues](https://github.com/drmforall/
 
 Remove passwords, cookies, tokens, private keys, device blobs, ESNs, and session identifiers before sharing logs or screenshots.
 
-This repository and its releases remain **private**; downloads require owner-granted access. No project-wide redistribution license has been declared. Bundled components and utilities may have separate terms. Use the application only for content and systems you are authorized to access.
+This repository and its releases are **public**; downloads are available without repository invitations. No project-wide redistribution license has been declared. Bundled components and utilities may have separate terms. Use the application only for content and systems you are authorized to access.
 
 <div align="center">
 
