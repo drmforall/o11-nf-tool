@@ -184,10 +184,22 @@ Closing the application during an active operation asks whether to stop the run 
 
 ![Launch, configure, inspect, run and review](media/workflow.svg)
 
+### Choose your Windows package
+
+| Package | Download | Purpose |
+| :--- | :--- | :--- |
+| **Standalone EXE** | [Windows x64 EXE](https://github.com/drmforall/o11-nf-tool/releases/download/v1.0.1/o11-NF-Tool-1.0.1-windows-x64.exe) | One file, no install wizard |
+| **Folder bundle / portable ZIP** | [Windows x64 ZIP](https://github.com/drmforall/o11-nf-tool/releases/download/v1.0.1/o11-NF-Tool-1.0.1-windows-x64-portable.zip) | Extract the entire folder, then run `o11 NF.exe` |
+| **Installer** | [Windows x64 Setup](https://github.com/drmforall/o11-nf-tool/releases/download/v1.0.1/o11-NF-Tool-1.0.1-windows-x64-setup.exe) | Per-user install, shortcuts, and uninstall support |
+
+All three formats package the same x64 application. **Windows 11 x64 passed local packaging checks.** Windows 10 x64 and Windows 11 ARM64 through x64 emulation remain untested; current browser automation's upstream requirements start at Windows 11. Windows 8.1 and older, 32-bit systems, and native ARM64 are not supported by these builds. See the [complete Windows compatibility and package guide](WINDOWS-BUILDS.md).
+
+The ZIP needs no install wizard, but its application data still normally uses `%LOCALAPPDATA%\o11NFTool`. Keep `_internal` beside its executable.
+
 ### First launch
 
 1. Open [Latest release](https://github.com/drmforall/o11-nf-tool/releases/latest).
-2. Download **o11.NF.exe**. GitHub normalizes spaces in asset names; the repository copy is named `o11 NF.exe`.
+2. Choose the standalone **o11-NF-Tool-1.0.1-windows-x64.exe**, ZIP, or Setup package from the table above. The root repository still contains the standalone copy named `o11 NF.exe`.
 3. Save to a writable Windows x64 folder and close older running copies.
 4. Launch the executable and wait for startup checks.
 5. Read Activity. Resolve reported errors and use Retry setup if needed.
@@ -231,10 +243,11 @@ To update, close the app, download the newer EXE, and run it. The launcher prese
 
 | Release detail | Value |
 | :--- | :--- |
-| Version | **v1.0.0** |
+| Version | **v1.0.1** — Windows packaging release |
 | Publication date | **6 October 2026** |
-| Size | **66,846,564 bytes** |
-| Download | [GitHub Release](https://github.com/drmforall/o11-nf-tool/releases/tag/v1.0.0) |
+| Standalone EXE size | **66,846,564 bytes** |
+| Download | [GitHub Release](https://github.com/drmforall/o11-nf-tool/releases/tag/v1.0.1) |
+| All package checksums | [SHA256SUMS.txt](https://github.com/drmforall/o11-nf-tool/releases/download/v1.0.1/SHA256SUMS.txt) |
 
 **SHA-256**
 
@@ -243,10 +256,10 @@ F306CDF321EF9D829C2B7751192B8050E4D159DD83259B11C356DF7AFB754E38
 ```
 
 ```powershell
-Get-FileHash -LiteralPath '.\o11.NF.exe' -Algorithm SHA256
+Get-FileHash -LiteralPath '.\o11-NF-Tool-1.0.1-windows-x64.exe' -Algorithm SHA256
 ```
 
-The digest confirms a match to the published artifact; it is not a signing or security-certification claim. Screenshots verify startup and visible controls. Live service acceptance and end-to-end online operation have not been verified during publication.
+The digest above identifies the standalone EXE; use SHA256SUMS.txt for ZIP and Setup checksums. It is not a signing or security-certification claim. Packaged self-tests passed for the standalone, folder, extracted ZIP, and installed runtime on the available Windows 11 host. Installer installation and uninstall were checked in an isolated test directory. Live service acceptance and other Windows configurations remain unverified.
 
 ## Troubleshooting
 
