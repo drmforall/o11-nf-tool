@@ -14,7 +14,7 @@
 
 ![Six capabilities in one desktop workspace](media/capabilities.svg)
 
-o11 NF Tool brings title selection, track inspection, language preferences, progress, and local playback into one black-and-crimson desktop interface. This repository distributes the **Windows executable, user guide, and documentation artwork**. Application source and account sessions are excluded. An owner-supplied WVD file is stored separately in the private repository's `devices/` folder; it is not included in the downloadable EXE release.
+o11 NF Tool brings title selection, track inspection, language preferences, progress, and local playback into one black-and-crimson desktop interface. This repository distributes the **Windows executable, user guide, and documentation artwork**. Application source and account sessions are excluded. Owner-supplied WVD files are stored separately in the private repository's `devices/` folder; they are not included in the downloadable EXE release.
 
 The current backend uses Android phone authentication. The historical TV wording on the activation checkbox refers to the browser code-entry page, not a switch to Android TV authentication. Quality is capped at **1920 × 1080**. Service acceptance and available tracks depend on your account, device setup, title, and the service response.
 
@@ -140,9 +140,16 @@ After a successful import, the app invalidates previous track selections and sta
 
 **Device files present / No device loaded** reports local file presence. **Service status** starts unchecked, can report a successful title license response, and reports revocation only when an explicit revocation message is returned. A generic request failure does not establish revocation.
 
-### Private repository device attachment
+### Use the devices in the repository
 
-The `devices/` directory contains the WVD file supplied by the repository owner. WVD containers include device credentials and a private key. This attachment is limited to the private repository; it is not a release asset, is not bundled into the EXE, and has not been tested for live service acceptance. Its presence does not grant redistribution rights.
+> **Device setup:** Use a device file available in the repository's [devices folder](devices/) with the app's **Load device** control. Download your selected `.wvd` file to your PC, open **Load device**, and select that file. Load one device at a time; the app then prepares a fresh authentication session.
+
+| Available device | File |
+| :--- | :--- |
+| Haier Android TV | [Haier WVD](devices/haier_haier_android_tv_ff_pro_17.0.0_d6fcadf2_20446_l1_20261005_120723.wvd) |
+| Vestel Android TV | [Vestel WVD](devices/vestel_android_tv_15.0.0_3acd8dbb_22402_l1_20261005_113102%20%282%29.wvd) |
+
+These owner-supplied WVD files contain device credentials and a private key. They are stored in the private repository, are not release assets or bundled into the EXE, and have not been tested for live service acceptance. Use only devices you are authorized to use; repository access does not grant redistribution rights.
 
 ![Activity and quick tools](media/activity.svg)
 
