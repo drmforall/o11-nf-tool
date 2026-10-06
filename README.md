@@ -25,7 +25,7 @@ The application bundles Python and its application packages. Missing media utili
 ## Download and launch
 
 1. Open [Latest release](https://github.com/drmforall/o11-nf-tool/releases/latest).
-2. Download **o11 NF.exe** to a writable folder on your Windows x64 PC.
+2. Download **o11.NF.exe** (GitHub normalizes spaces in release asset names) to a writable folder on your Windows x64 PC.
 3. Close any older running copy and open the downloaded executable.
 4. Wait for startup setup to finish. Internet access is required for missing media utilities.
 5. Follow the Activity panel. If setup fails, correct the reported problem and select **Retry setup**.
@@ -129,7 +129,7 @@ F306CDF321EF9D829C2B7751192B8050E4D159DD83259B11C356DF7AFB754E38
 Check a downloaded copy in PowerShell:
 
 ```powershell
-Get-FileHash -LiteralPath '.\o11 NF.exe' -Algorithm SHA256
+Get-FileHash -LiteralPath '.\o11.NF.exe' -Algorithm SHA256
 ```
 
 The hash verifies that your file matches this release artifact; it is not a claim of publisher signing or security certification.
