@@ -14,7 +14,7 @@
 
 ![Six capabilities in one desktop workspace](media/capabilities.svg)
 
-o11 NF Tool brings title selection, track inspection, language preferences, progress, and local playback into one black-and-crimson desktop interface. This repository distributes the **Windows executable, user guide, and documentation artwork**. Application source and account sessions are excluded. Owner-supplied WVD files are stored separately in the repository's `devices/` folder; they are not included in the downloadable EXE release.
+o11 NF Tool brings title selection, track inspection, language preferences, progress, and local playback into one black-and-crimson desktop interface. This repository distributes the **Windows executable, user guide, and documentation artwork**. Application source and account sessions are excluded. Device credentials are supplied locally by the user and are not included in the downloadable EXE release.
 
 The current backend uses Android phone authentication. The historical TV wording on the activation checkbox refers to the browser code-entry page, not a switch to Android TV authentication. Quality is capped at **1920 × 1080**. Service acceptance and available tracks depend on your account, device setup, title, and the service response.
 
@@ -140,16 +140,18 @@ After a successful import, the app invalidates previous track selections and sta
 
 **Device files present / No device loaded** reports local file presence. **Service status** starts unchecked, can report a successful title license response, and reports revocation only when an explicit revocation message is returned. A generic request failure does not establish revocation.
 
-### Use the devices in the repository
+### Load your local CDM for Netflix
 
-> **Device setup:** Use a device file available in the repository's [devices folder](devices/) with the app's **Load device** control. Download your selected `.wvd` file to your PC, open **Load device**, and select that file. Load one device at a time; the app then prepares a fresh authentication session.
+The previously bundled Haier and Vestel WVD files have been removed from the current repository. For your Netflix setup, select your new local Changhong device file:
 
-| Available device | File |
-| :--- | :--- |
-| Haier Android TV | [Haier WVD](devices/haier_haier_android_tv_ff_pro_17.0.0_d6fcadf2_20446_l1_20261005_120723.wvd) |
-| Vestel Android TV | [Vestel WVD](devices/vestel_android_tv_15.0.0_3acd8dbb_22402_l1_20261005_113102%20%282%29.wvd) |
+`changhong_changhong-tv-ikebukuro_16.0.1_001_0e02362f_13181_l1(1).wvd`
 
-These owner-supplied WVD files contain device credentials and a private key. They are publicly available in this repository, are not release assets or bundled into the EXE, and have not been tested for live service acceptance. Use only devices you are authorized to use; repository access does not grant redistribution rights.
+1. Keep the WVD file on your own PC.
+2. Open the application and choose **Load device**.
+3. Select the Changhong `.wvd` file and review **Device details**.
+4. Complete your account authentication when prompted.
+
+Load one device at a time. A successful local import does not establish Netflix compatibility or service acceptance; this replacement has not been tested against Netflix. Device credentials and private keys should remain local.
 
 ![Activity and quick tools](media/activity.svg)
 
@@ -296,3 +298,4 @@ This repository and its releases are **public**; downloads are available without
 [Download](https://github.com/drmforall/o11-nf-tool/releases/latest) · [Function guide](#complete-function-guide) · [Report an issue](https://github.com/drmforall/o11-nf-tool/issues)
 
 </div>
+
