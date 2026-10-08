@@ -140,18 +140,18 @@ After a successful import, the app invalidates previous track selections and sta
 
 **Device files present / No device loaded** reports local file presence. **Service status** starts unchecked, can report a successful title license response, and reports revocation only when an explicit revocation message is returned. A generic request failure does not establish revocation.
 
-### Load your local CDM for Netflix
+### Changhong CDM setup for Netflix
 
-The previously bundled Haier and Vestel WVD files have been removed from the current repository. For your Netflix setup, select your new local Changhong device file:
+The previously bundled Haier and Vestel WVD files have been removed from the current repository. The replacement Changhong WVD is available in the [devices folder](devices/). For your Netflix setup, download the file below and select it using **Load device**:
 
-`changhong_changhong-tv-ikebukuro_16.0.1_001_0e02362f_13181_l1(1).wvd`
+[Download Changhong WVD](devices/changhong_changhong-tv-ikebukuro_16.0.1_001_0e02362f_13181_l1%281%29.wvd)
 
-1. Keep the WVD file on your own PC.
+1. Download the Changhong WVD to your PC.
 2. Open the application and choose **Load device**.
 3. Select the Changhong `.wvd` file and review **Device details**.
 4. Complete your account authentication when prompted.
 
-Load one device at a time. A successful local import does not establish Netflix compatibility or service acceptance; this replacement has not been tested against Netflix. Device credentials and private keys should remain local.
+Load one device at a time. A successful local import does not establish Netflix compatibility or service acceptance; this replacement has not been tested against Netflix. This owner-supplied file contains device credentials and a private key and is publicly available by the owner's explicit request. It is not bundled into the EXE or release downloads. Use only devices you are authorized to use; keep your account sessions private.
 
 ![Activity and quick tools](media/activity.svg)
 
@@ -298,4 +298,5 @@ This repository and its releases are **public**; downloads are available without
 [Download](https://github.com/drmforall/o11-nf-tool/releases/latest) · [Function guide](#complete-function-guide) · [Report an issue](https://github.com/drmforall/o11-nf-tool/issues)
 
 </div>
+
 
